@@ -12,15 +12,14 @@ public class SpringBootHelloWorldApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootHelloWorldApplication.class, args);
 	}
-	@CrossOrigin(origins = "http://localhost:3000")
 	@RequestMapping("/")
 	@GetMapping
 	public String home() {
 		return "<html><body><p>Home con HTML</p></body></html>";
 	}
-	@CrossOrigin(origins = "http://localhost:3000")
-	@RequestMapping("/new")
+	@CrossOrigin
+	@GetMapping("/api/hello")
 	public String newHome() {
-		return "Hola mundo";
+		return "Hola Mundo";
 	}
 }
