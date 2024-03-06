@@ -12,7 +12,7 @@ public class SpringBootHelloWorldApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootHelloWorldApplication.class, args);
 	}
-	@RequestMapping("/")
+	@RequestMapping("/api/home")
 	@GetMapping
 	public String home() {
 		return "<html><body><p>Home con HTML</p></body></html>";
